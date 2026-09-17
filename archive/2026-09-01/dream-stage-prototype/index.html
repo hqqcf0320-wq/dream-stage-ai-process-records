@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dream Stage — Throwaway Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- THROWAWAY PROTOTYPE: Three dream-stage directions, switchable with ?variant=A|B|C. -->
+  <main id="app" aria-live="polite"></main>
+
+  <aside class="controls" aria-label="演员控制台">
+    <p class="eyebrow">PERFORMER CONTROL</p>
+    <label>移动 <input id="movement" type="range" min="0" max="100" value="42" /></label>
+    <label>声音 <input id="voice" type="range" min="0" max="100" value="35" /></label>
+    <label>强度 <input id="intensity" type="range" min="0" max="100" value="58" /></label>
+    <div class="actions">
+      <button id="freeze">Freeze</button>
+      <button id="reject">Reject</button>
+      <button id="replay">Replay</button>
+    </div>
+    <output id="state"></output>
+  </aside>
+
+  <nav class="switcher" aria-label="原型变体切换">
+    <button id="previous" aria-label="上一个变体">←</button>
+    <span id="variantLabel"></span>
+    <button id="next" aria-label="下一个变体">→</button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
